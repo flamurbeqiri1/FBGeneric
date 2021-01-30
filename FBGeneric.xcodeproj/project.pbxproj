@@ -16,6 +16,9 @@
 		0138A66625C59FA8009A4594 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0138A66425C59FA8009A4594 /* Main.storyboard */; };
 		0138A66825C59FAB009A4594 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0138A66725C59FAB009A4594 /* Assets.xcassets */; };
 		0138A66B25C59FAB009A4594 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0138A66925C59FAB009A4594 /* LaunchScreen.storyboard */; };
+		015FCD1425C5B5E2005D5715 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015FCD1325C5B5E1005D5715 /* AuthenticationService.swift */; };
+		015FCD1925C5B5E8005D5715 /* AuthDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015FCD1825C5B5E8005D5715 /* AuthDataProtocol.swift */; };
+		015FCD2125C5B5F1005D5715 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015FCD2025C5B5F1005D5715 /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,9 @@
 		0138A66725C59FAB009A4594 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0138A66A25C59FAB009A4594 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0138A66C25C59FAB009A4594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		015FCD1325C5B5E1005D5715 /* AuthenticationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		015FCD1825C5B5E8005D5715 /* AuthDataProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthDataProtocol.swift; sourceTree = "<group>"; };
+		015FCD2025C5B5F1005D5715 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,9 @@
 		0138A63C25C59F42009A4594 /* FBGeneric */ = {
 			isa = PBXGroup;
 			children = (
+				015FCD0425C5B514005D5715 /* Helpers */,
+				015FCCFB25C5B451005D5715 /* Protocols */,
+				015FCCE425C5B2C9005D5715 /* Services */,
 				0138A63D25C59F42009A4594 /* FBGeneric.h */,
 				0138A63E25C59F42009A4594 /* Info.plist */,
 			);
@@ -121,6 +130,30 @@
 				0138A66C25C59FAB009A4594 /* Info.plist */,
 			);
 			path = FBGenericExample;
+			sourceTree = "<group>";
+		};
+		015FCCE425C5B2C9005D5715 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				015FCD1325C5B5E1005D5715 /* AuthenticationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		015FCCFB25C5B451005D5715 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				015FCD1825C5B5E8005D5715 /* AuthDataProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		015FCD0425C5B514005D5715 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				015FCD2025C5B5F1005D5715 /* Result.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +234,7 @@
 				TargetAttributes = {
 					0138A63925C59F42009A4594 = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 					};
 					0138A64225C59F42009A4594 = {
 						CreatedOnToolsVersion = 12.3;
@@ -262,6 +296,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				015FCD2125C5B5F1005D5715 /* Result.swift in Sources */,
+				015FCD1925C5B5E8005D5715 /* AuthDataProtocol.swift in Sources */,
+				015FCD1425C5B5E2005D5715 /* AuthenticationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +475,7 @@
 		0138A64F25C59F42009A4594 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = CD82SJCP79;
@@ -455,6 +493,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -463,6 +502,7 @@
 		0138A65025C59F42009A4594 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = CD82SJCP79;
@@ -488,6 +528,7 @@
 		0138A65225C59F42009A4594 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CD82SJCP79;
 				INFOPLIST_FILE = FBGenericTests/Info.plist;
@@ -506,6 +547,7 @@
 		0138A65325C59F42009A4594 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CD82SJCP79;
 				INFOPLIST_FILE = FBGenericTests/Info.plist;
