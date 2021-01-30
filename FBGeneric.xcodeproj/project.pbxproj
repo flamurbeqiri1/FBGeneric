@@ -49,6 +49,7 @@
 		015FCD1325C5B5E1005D5715 /* AuthenticationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		015FCD1825C5B5E8005D5715 /* AuthDataProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthDataProtocol.swift; sourceTree = "<group>"; };
 		015FCD2025C5B5F1005D5715 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		015FCD4E25C5C0D3005D5715 /* FBGeneric.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FBGeneric.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +81,7 @@
 		0138A63025C59F42009A4594 = {
 			isa = PBXGroup;
 			children = (
+				015FCD4E25C5C0D3005D5715 /* FBGeneric.podspec */,
 				0138A63C25C59F42009A4594 /* FBGeneric */,
 				0138A64725C59F42009A4594 /* FBGenericTests */,
 				0138A65D25C59FA8009A4594 /* FBGenericExample */,
